@@ -1,0 +1,317 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+}
+
+p{
+    line-height: 1.5;
+}
+
+h2{
+    margin-bottom: 15px;
+}
+
+img{
+    width: 400px;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+.nav-content .fa-bars{
+    display: none;
+}
+/* -------------------Navbar---------------------- */
+.top-container{
+    height: 100vh;
+    /* position: relative; */
+}
+
+.logo h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 46px;
+    color: rgb(226, 58, 58);
+    transform: rotate(-15deg);
+    margin: 0;
+    margin-left: 10px;
+}
+
+.logo span{
+    position: absolute;
+    top: 35px;
+    left: 30px;
+}
+
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: fixed;
+    background-color: #f8f6f6;
+    opacity: 0.7;
+    height: 100px;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+.nav-content ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.top-container .nav-content li, a{
+    
+    color: rgb(243, 84, 84);
+    list-style: none;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 4px;
+}
+
+li:hover{
+    border-bottom: 1px solid rgb(243, 84, 84);
+}
+
+/* ---------x------------Navbar------------x---------- */
+
+/* -------------------Main-Content-------------------- */
+
+#main-content{
+    margin: 0 auto;
+    margin-top: 120px;
+    max-width: 600px;
+}
+
+#main-content img{
+    margin-left: 200px;
+}
+
+.btn{
+    background-color: rgb(226, 58, 58);
+    border: none;
+    color: white;
+    padding: 8px;
+    margin-top: 20px;
+    outline: none;
+    display: block;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: rgba(206, 38, 38, 0.8);
+}
+
+.btn:active{
+    background-color: tomato;
+}
+
+/* ----------x---------Main-Content----------x---------- */
+
+/* -----------------Middle-Content---------------------- */
+.about-container{
+    height: 100vh;
+    padding: 0 20px;
+}
+
+.head{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#about{
+    display: flex;
+}
+
+.testimonials{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 100px;
+}
+
+.card span{
+    line-height: 2;
+}
+
+/* ---------x--------Middle-Content---------x------------- */
+
+/* -----------------Nutrition-Section---------------------- */
+
+.nutrition-content{
+    display: flex;
+}
+
+.nutrition-container{
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+#nutrition h2{
+    padding: 20px 0;
+}
+/* ---------x--------Nutrition-Section---------x------------- */
+
+/* --------------------Contact-Section--------------------------- */
+
+.contact-container{
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#contact{
+    display: flex;
+    justify-content: space-between;
+}
+
+small{
+    display: block;
+    margin: 20px 0;
+}
+
+.mail{
+    margin-bottom: 80px;
+    font-weight: 600;
+}
+
+.contact-content .fab{
+    color: red;
+    opacity: 0.8;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+input{
+    border: 1px solid black;
+    outline: none;
+    padding: 1px 4px;
+}
+
+/* -------------x-------Contact-Section--------------x------------- */
+
+/* ----------------------footer------------------------- */
+
+#footer{
+    background-color: rgb(226, 58, 58);
+    padding: 20px;
+}
+
+
+.icon{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.icon .fab{
+    margin: 10px;
+}
+
+.icon .fab{
+    cursor: pointer;
+}
+
+/* ------------x----------footer----------x--------------- */
+
+
+@media(max-width: 426px){
+
+    img{
+        width: 200px;
+    }
+
+    .top-container{
+        position: relative;
+    }
+
+    .nav-content ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-content ul li{
+        border: none;
+    }
+
+    #main-content img{
+        margin: 0;
+    }
+
+    #main-content{
+        margin-top: 120px;
+        padding: 20px;
+    }
+
+    #about{
+        flex-wrap: wrap;
+    }
+
+    .testimonials{
+        grid-template-columns: 1fr;
+        height: 100vh;
+    }
+
+    #contact{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nutrition-content{
+        flex-wrap: wrap;
+    }
+
+    .nutrition-container{
+        margin-top: 650px;
+    }
+
+    .nav-content .fa-bars{
+        display: flex;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 20px;
+    }
+
+    .nav-content .fa-bars:hover{
+        cursor: pointer;
+    }
+
+    .nav-content ul{
+        display: none;
+        position: absolute;
+        right: 120px;
+    }
+
+    .nav-content.active ul{
+        display: flex;
+    }
+}
+
+@media(max-width: 376px){
+    .nav-content ul{
+        display: none;
+        position: absolute;
+        right: 90px;
+    }
+}
+
+@media(max-width: 321px){
+    .nav-content ul{
+        display: none;
+        position: absolute;
+        right: 40px;
+    }
+}
